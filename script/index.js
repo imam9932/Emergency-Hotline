@@ -56,4 +56,132 @@ document.getElementById('heart-picture-9').addEventListener('click',function(){
  
 clickAndIncreaseHeart('heart-picture-9')
 })
+
+
+// function for call button click 
+function clickAndCall(id){
+  // // for alert 
+  // const serviceName=document.getElementById(id).innerText
+  // const serviceNumber=document.getElementById(id).innerText
+  // const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  // alert( twiceName);
+
+  // for reduce coin 
+ const coinElement =document.getElementById('coin-para').innerText
+ const perClickReduce=20
+
+ const coinAfterOneClick=coinElement-perClickReduce
+ document.getElementById('coin-para').innerText=coinAfterOneClick
+
+ if(coinElement<20){
+  alert('Your coins are under the limit')
+}
+return;
+
+}
+// national emergency service
+document.getElementById('call-btn-national-emergency').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('emergency-service-name').innerText
+  const serviceNumber=document.getElementById('emergency-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
  
+clickAndCall('call-btn-national-emergency')
+})
+
+// police helpline
+
+document.getElementById('call-btn-police-helpline').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('police-helpline-name').innerText
+  const serviceNumber=document.getElementById('police-helpline-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-police-helpline')
+})
+
+// fire service 
+document.getElementById('call-btn-fire-service').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('fire-service-name').innerText
+  const serviceNumber=document.getElementById('fire-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-fire-service')
+})
+// ambulance service
+document.getElementById('call-btn-ambulance').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('ambulance-service-name').innerText
+  const serviceNumber=document.getElementById('ambulance-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-ambulance')
+})
+// women & child 
+document.getElementById('call-btn-women-child').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('women-child-service-name').innerText
+  const serviceNumber=document.getElementById('women-child-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-women-child')
+})
+
+// anti-corruption
+document.getElementById('call-btn-anti-corruption').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('anti-corruption-service-name').innerText
+  const serviceNumber=document.getElementById('anti-corruption-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-anti-corruption')
+})
+
+// electricity
+document.getElementById('call-btn-electricity').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('electricity-service-name').innerText
+  const serviceNumber=document.getElementById('electricity-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-electricity')
+})
+
+// brac service
+document.getElementById('call-btn-brac').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('brac-service-name').innerText
+  const serviceNumber=document.getElementById('brac-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-brac')
+})
+
+// railway service
+document.getElementById('call-btn-railway').addEventListener('click',function(){
+//   // for alert 
+  const serviceName=document.getElementById('railway-service-name').innerText
+  const serviceNumber=document.getElementById('railway-service-number').innerText
+  const twiceName='Calling '+ serviceName+' '+ serviceNumber;
+  alert( twiceName);
+
+ 
+clickAndCall('call-btn-railway')
+})
