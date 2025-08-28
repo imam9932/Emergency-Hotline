@@ -59,6 +59,7 @@ clickAndIncreaseHeart('heart-picture-9')
 
 
 // function for call button click 
+
 function clickAndCall(id){
   // // for alert 
   // const serviceName=document.getElementById(id).innerText
@@ -185,3 +186,35 @@ document.getElementById('call-btn-railway').addEventListener('click',function(){
  
 clickAndCall('call-btn-railway')
 })
+
+// function for history section 
+
+const callButtons=document.getElementsByClassName('call-btn')
+const callingTime=new Date().toLocaleTimeString()
+for( let callButton of callButtons){
+    callButton.addEventListener('click',function(){
+       
+      const serviceName=callButton.parentNode.parentNode.children[1].innerText
+      const serviceNumber=callButton.parentNode.parentNode.children[3].innerText
+      
+      const historyCart=document.getElementById('history-container')
+      const historyCartDiv=document.createElement('div')
+      historyCartDiv.innerHTML=`
+      <div id='calling-history' class="mx-auto w-[380px] h-[83px] bg-gray-100 rounded-[10px] mt-[10px] flex justify-between items-center p-2  ">
+  <div>
+    <h2 class="text-[20px] font-semibold">${serviceName}</h2>
+    <p class="text-[18px] font-semibold">${serviceNumber}</p>
+  </div>
+   <h3 class='font-bold'>${callingTime}</h3>
+
+</div>
+      `
+     const historyCarts= historyCart.appendChild(historyCartDiv);
+
+     // function for clear history
+     document.getElementById('clear-btn').addEventListener('click',function(){
+       historyCarts.remove()
+     })
+    })
+}
+
