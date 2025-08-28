@@ -61,13 +61,7 @@ clickAndIncreaseHeart('heart-picture-9')
 // function for call button click 
 
 function clickAndCall(id){
-  // // for alert 
-  // const serviceName=document.getElementById(id).innerText
-  // const serviceNumber=document.getElementById(id).innerText
-  // const twiceName='Calling '+ serviceName+' '+ serviceNumber;
-  // alert( twiceName);
-
-  // for reduce coin 
+   // for reduce coin 
  const coinElement =document.getElementById('coin-para').innerText
  const perClickReduce=20
 
@@ -76,8 +70,10 @@ function clickAndCall(id){
 
  if(coinElement<20){
   alert('Your coins are under the limit')
+  return ;
 }
-return;
+ 
+ 
 
 }
 // national emergency service
@@ -90,6 +86,7 @@ document.getElementById('call-btn-national-emergency').addEventListener('click',
 
  
 clickAndCall('call-btn-national-emergency')
+return;
 })
 
 // police helpline
@@ -217,4 +214,20 @@ for( let callButton of callButtons){
      })
     })
 }
+
+// function for clicking copy 
+const copyButtons=document.getElementsByClassName('copy-btn')
+for(let copyButton of copyButtons){
+  copyButton.addEventListener('click',function(){
+    const serviceNumberForCopy=copyButton.parentNode.parentNode.children[3].innerText
+   const serviceNumberForAlert='Copied'+'-'+ serviceNumberForCopy
+  alert (serviceNumberForAlert)
+  // counting copy 
+   const copyIncreasingPara=document.getElementById('copy-increasing-para').innerText
+  const copyIncreasingElement=number++
+  document.getElementById('copy-increasing-para').innerText=copyIncreasingElement 
+
+  })
+}
+ 
 
