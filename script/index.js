@@ -59,23 +59,23 @@ clickAndIncreaseHeart('heart-picture-9')
 
 
 // function for call button click 
-
 function clickAndCall(id){
-   // for reduce coin 
- const coinElement =document.getElementById('coin-para').innerText
- const perClickReduce=20
 
+// for reduce coin 
+const coinElement =parseInt(document.getElementById('coin-para').innerText)
+const perClickReduce=20
+
+
+ if(coinElement<perClickReduce){
+  alert('Your coins are under the limit')
+return ;
+}
  const coinAfterOneClick=coinElement-perClickReduce
  document.getElementById('coin-para').innerText=coinAfterOneClick
 
- if(coinElement<20){
-  alert('Your coins are under the limit')
-  return ;
 }
- 
- 
 
-}
+
 // national emergency service
 document.getElementById('call-btn-national-emergency').addEventListener('click',function(){
 //   // for alert 
@@ -193,7 +193,9 @@ for( let callButton of callButtons){
        
       const serviceName=callButton.parentNode.parentNode.children[1].innerText
       const serviceNumber=callButton.parentNode.parentNode.children[3].innerText
+
       
+
       const historyCart=document.getElementById('history-container')
       const historyCartDiv=document.createElement('div')
       historyCartDiv.innerHTML=`
@@ -206,7 +208,8 @@ for( let callButton of callButtons){
 
 </div>
       `
-     const historyCarts= historyCart.appendChild(historyCartDiv);
+       
+      const historyCarts= historyCart.appendChild(historyCartDiv);
 
      // function for clear history
      document.getElementById('clear-btn').addEventListener('click',function(){
@@ -226,6 +229,9 @@ for(let copyButton of copyButtons){
    const copyIncreasingPara=document.getElementById('copy-increasing-para').innerText
   const copyIncreasingElement=number++
   document.getElementById('copy-increasing-para').innerText=copyIncreasingElement 
+// copy text 
+  navigator.clipboard.writeText(serviceNumberForCopy)
+         
 
   })
 }
