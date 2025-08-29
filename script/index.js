@@ -1,6 +1,7 @@
 // function for heart clicking
 
 let number=1
+let num=1
 function clickAndIncreaseHeart(id){
 
   const heartIncreaseElement=document.getElementById('heart-increasing-para').innerText
@@ -62,14 +63,14 @@ clickAndIncreaseHeart('heart-picture-9')
 function clickAndCall(id){
 
 // for reduce coin 
-const coinElement =parseInt(document.getElementById('coin-para').innerText)
-const perClickReduce=20
-
-
- if(coinElement<perClickReduce){
-  alert('Your coins are under the limit')
+   const coinElement =parseInt(document.getElementById('coin-para').innerText)
+  const perClickReduce=20
+  
+  if(coinElement<perClickReduce){
+ alert('Your coins are under the limit')
 return ;
 }
+
  const coinAfterOneClick=coinElement-perClickReduce
  document.getElementById('coin-para').innerText=coinAfterOneClick
 
@@ -84,9 +85,9 @@ document.getElementById('call-btn-national-emergency').addEventListener('click',
   const twiceName='Calling '+ serviceName+' '+ serviceNumber;
   alert( twiceName);
 
+  clickAndCall('call-btn-national-emergency')
  
-clickAndCall('call-btn-national-emergency')
-return;
+   
 })
 
 // police helpline
@@ -227,7 +228,7 @@ for(let copyButton of copyButtons){
   alert (serviceNumberForAlert)
   // counting copy 
    const copyIncreasingPara=document.getElementById('copy-increasing-para').innerText
-  const copyIncreasingElement=number++
+  const copyIncreasingElement=num++
   document.getElementById('copy-increasing-para').innerText=copyIncreasingElement 
 // copy text 
   navigator.clipboard.writeText(serviceNumberForCopy)
